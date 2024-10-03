@@ -145,7 +145,7 @@ pub struct MediaSource {
     pub transcoding_container: Option<String>,
     pub analyze_duration_ms: Option<i64>,
     pub default_audio_stream_index: i64,
-    pub default_subtitle_stream_index: i64,
+    pub default_subtitle_stream_index: Option<i64>,
   //     "Formats": [
   //       "string"
   //     ],
