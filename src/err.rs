@@ -1,4 +1,4 @@
-use std::fmt;
+use std::{error, fmt};
 
 pub type Result<T> = std::result::Result<T, JellyfinError>;
 
@@ -24,6 +24,8 @@ impl fmt::Display for JellyfinError {
         }
     }
 }
+
+impl error::Error for JellyfinError {}
 
 impl From<reqwest::Error> for JellyfinError {
     fn from(value: reqwest::Error) -> Self {
